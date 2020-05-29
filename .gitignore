@@ -47,3 +47,7 @@ Gemfile.lock
 _config.dev.yml
 .vscode
 *.gem
+# ftpmirror passworded file
+ftpmirror.sh
+# ignore site files while we use ovh
+www
