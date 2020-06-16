@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            cyb.org.uk
 tagline:          "Just some guy's blog"
 description:      'A blog about technology & open source'
-url:              http://cyb.org.uk
+url:              https://cyb.org.uk
 baseurl:          '/'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -16,7 +16,7 @@ baseurl:          '/'
 
 author:
   name:           'Cy Borg'
-  url:            http://cyb.org.uk
+  url:            https://cyb.org.uk
 
 paginate:         5
 # paginate_path:    '/page:num'
@@ -29,6 +29,16 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-webmention_io
+
+webmentions:
+  username: CYB_ORG_UK
+  cache_folder: .cache
+  webmentions:
+    username: YOUR_USERNAME
+    cache_folder: .cache
+    # skip bad URLs for 5 days
+    cache_bad_uris_for: 5
 
 # Sidebar link settings
 sidebar_home_link:  true
@@ -36,3 +46,7 @@ sidebar_home_link:  true
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
+                                
+exclude: 
+  - ftpmirror.sh
+  - archive
